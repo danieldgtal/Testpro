@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
+<p>This is the Product create view Page</p>
 <form action="." method="POST"> {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Save" >
+   <p> <input type="submit" value="Save" /> </p>
 </form>
 {% endblock %}

@@ -13,7 +13,6 @@ class ProductForm(forms.ModelForm):
                             attrs={
                                 "placeholder": "Your description",
                                 "class": "new-class-name two",
-                                "class": "new-class-name two",
                                 "id": "my-id-for-textarea",
                                 "rows": 20,
                                 'cols': 120
@@ -53,7 +52,7 @@ class ProductForm(forms.ModelForm):
     #         return description
 
 
-
+#
 class RawProductForm(forms.Form):
     title = forms.CharField(label='', widget=forms.TextInput(attrs={"placeholder": "Your title"}))
     description = forms.CharField(
@@ -68,4 +67,4 @@ class RawProductForm(forms.Form):
                                 }
                             )
                         )
-price   = forms.DecimalField(initial=199.99)
+    price   = forms.DecimalField(initial=199.00)

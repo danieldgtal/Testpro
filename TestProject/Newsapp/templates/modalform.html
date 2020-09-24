@@ -1,10 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %} ModalForms {% endblock%}
+{% block body %}
+<div class="container">
+    <h1>Modal Forms Registration</h1>
+    <form action="{% url 'modelform' %}" method="post">
+        {% csrf_token %}
+    {{modalform.as_p}}
+        <input type="submit" class="btn btn-success" value="Register"/>
+    </form>
+</div>
+{% endblock %}
